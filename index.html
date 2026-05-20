@@ -71,6 +71,9 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:none;}
 .nav-links a::after{content:"";position:absolute;bottom:-6px;left:0;right:0;height:1px;background:var(--juicy);transform:scaleX(0);transform-origin:left;transition:transform 0.3s var(--ease-out);}
 .nav-links a:hover{color:var(--cream);}
 .nav-links a:hover::after{transform:scaleX(1);}
+.nav-actions{display:flex;align-items:center;gap:12px;}
+.nav-ig{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:999px;border:1px solid rgba(232,226,213,0.2);color:rgba(232,226,213,0.85);transition:color 0.3s, border-color 0.3s, transform 0.3s, background 0.3s;}
+.nav-ig:hover{color:var(--juicy);border-color:var(--juicy);background:rgba(255,45,45,0.08);transform:translateY(-1px);}
 .nav-cta{padding:11px 22px;border-radius:999px;background:linear-gradient(180deg, #ff5050, #c70d0d);color:#fff;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;box-shadow:0 0 24px rgba(255,45,45,0.5), inset 0 1px 0 rgba(255,255,255,0.3);border:1px solid rgba(255,200,200,0.2);transition:transform 0.3s, box-shadow 0.3s;}
 .nav-cta:hover{transform:translateY(-1px);box-shadow:0 0 36px rgba(255,45,45,0.8), inset 0 1px 0 rgba(255,255,255,0.4);}
 @media (max-width:900px){.nav-links{display:none;}}
@@ -227,7 +230,7 @@ section.scene{position:relative;z-index:5;padding:140px 24px;max-width:1320px;ma
 .partner-logo .role{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:rgba(232,226,213,0.5);margin-top:14px;}
 @media (max-width:700px){.partner-logo:not(:last-child)::after{content:none;}.partner-logo{padding:24px;}}
 .tickets-frame{color-scheme:dark;}
-.tickets-frame iframe{width:100%!important;min-height:780px;display:block;border:0!important;color-scheme:dark;background:transparent;}
+.tickets-frame iframe{width:100%!important;min-height:780px;display:block;border:0!important;color-scheme:dark;background:#1a1a1a;filter:invert(0.92) hue-rotate(180deg) saturate(1.25);}
 @media (max-width:700px){.tickets-frame iframe{min-height:920px;}}
 
 /* CTA */
@@ -317,7 +320,12 @@ footer{position:relative;z-index:5;padding:80px 24px 32px;max-width:1320px;margi
     <a href="#curators" data-cursor="hover">Curadores</a>
     <a href="#partners" data-cursor="hover">Aliados</a>
   </div>
-  <a href="#tickets" class="nav-cta" data-cursor="hover">Comprar Tickets</a>
+  <div class="nav-actions">
+    <a href="https://www.instagram.com/juicyandcream__/" target="_blank" rel="noopener" class="nav-ig" data-cursor="hover" aria-label="Instagram @juicyandcream__">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    </a>
+    <a href="#tickets" class="nav-cta" data-cursor="hover">Comprar Tickets</a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -611,9 +619,7 @@ footer{position:relative;z-index:5;padding:80px 24px 32px;max-width:1320px;margi
     <div class="footer-col">
       <h4>Contacto</h4>
       <ul>
-        <li><a href="mailto:tickets@juicyandcream.com" data-cursor="hover">tickets@juicyandcream.com</a></li>
-        <li><a href="mailto:press@juicyandcream.com" data-cursor="hover">press@juicyandcream.com</a></li>
-        <li><a href="#" data-cursor="hover">@juicy_cream</a></li>
+        <li><a href="https://www.instagram.com/juicyandcream__/" target="_blank" rel="noopener" data-cursor="hover">@juicyandcream__</a></li>
       </ul>
     </div>
   </div>
