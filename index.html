@@ -226,6 +226,9 @@ section.scene{position:relative;z-index:5;padding:140px 24px;max-width:1320px;ma
 .partner-logo .mark .num{font-family:var(--display);background:linear-gradient(180deg, #fff 0%, #b8b8b8 50%, #fff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
 .partner-logo .role{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:rgba(232,226,213,0.5);margin-top:14px;}
 @media (max-width:700px){.partner-logo:not(:last-child)::after{content:none;}.partner-logo{padding:24px;}}
+.tickets-frame{color-scheme:dark;}
+.tickets-frame iframe{width:100%!important;min-height:780px;display:block;border:0!important;color-scheme:dark;background:transparent;}
+@media (max-width:700px){.tickets-frame iframe{min-height:920px;}}
 
 /* CTA */
 .cta-section{padding:140px 24px;position:relative;z-index:5;text-align:center;}
@@ -365,7 +368,7 @@ footer{position:relative;z-index:5;padding:80px 24px 32px;max-width:1320px;margi
     <span class="eyebrow">Tickets<span class="dot"></span>Compra segura · Fourvenues</span>
     <h2 class="h-display">Comprá tu <span class="accent">entrada</span></h2>
   </div>
-  <div class="tickets-frame reveal" style="max-width:980px;margin:48px auto 0;background:rgba(20,8,8,0.5);border:1px solid var(--line);border-radius:20px;padding:24px;backdrop-filter:blur(8px);">
+  <div id="fourvenues-iframe" class="tickets-frame" style="max-width:980px;margin:48px auto 0;border-radius:20px;overflow:hidden;color-scheme:dark;background:#0a0202;">
     <script src="https://www.fourvenues.com/assets/iframe/3nomadsx/2T9A"></script>
   </div>
 </section>
