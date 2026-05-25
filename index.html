@@ -84,13 +84,6 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:none;}
 .cherries{position:absolute;inset:0;pointer-events:none;z-index:3;overflow:hidden;}
 .cherry{position:absolute;width:var(--size, 70px);height:auto;filter:drop-shadow(0 10px 32px rgba(255,138,61,0.45)) drop-shadow(0 0 16px rgba(233,162,59,0.35));animation:float var(--dur, 8s) ease-in-out infinite;animation-delay:var(--delay, 0s);opacity:0;transform-origin:50% 30%;}
 .cherry.appear{opacity:1;transition:opacity 1.5s ease-out 0.8s;}
-.hero-foliage{position:absolute;inset:0;pointer-events:none;z-index:2;overflow:hidden;}
-.hero-foliage .leaf{position:absolute;opacity:0;filter:drop-shadow(0 14px 34px rgba(0,0,0,0.55));animation:leaf-in 1.8s var(--ease-out) forwards;}
-.hero-foliage .leaf.tl{top:-46px;left:-58px;width:300px;transform:rotate(18deg);animation-delay:0.35s;}
-.hero-foliage .leaf.tr{top:-66px;right:-60px;width:340px;transform:scaleX(-1) rotate(14deg);animation-delay:0.55s;}
-.hero-foliage .leaf.bl{bottom:-80px;left:-50px;width:240px;transform:rotate(-150deg);animation-delay:0.8s;}
-@keyframes leaf-in{from{opacity:0;}to{opacity:0.5;}}
-@media (max-width:700px){.hero-foliage .leaf.tl{width:160px;}.hero-foliage .leaf.tr{width:180px;}.hero-foliage .leaf.bl{display:none;}}
 @keyframes float{0%,100%{transform:translateY(0) translateX(0) rotate(var(--rot, 0deg));}25%{transform:translateY(-18px) translateX(8px) rotate(calc(var(--rot, 0deg) + 3deg));}50%{transform:translateY(-10px) translateX(-8px) rotate(calc(var(--rot, 0deg) - 2deg));}75%{transform:translateY(-22px) translateX(4px) rotate(calc(var(--rot, 0deg) + 4deg));}}
 
 .hero-eye{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.4em;text-transform:uppercase;color:var(--juicy);display:flex;align-items:center;gap:14px;margin-bottom:28px;opacity:0;animation:fadeUp 1s var(--ease-out) 0.3s forwards;}
@@ -338,11 +331,6 @@ footer{position:relative;z-index:5;padding:80px 24px 32px;max-width:1320px;margi
 
 <!-- HERO -->
 <section class="hero" id="top">
-  <div class="hero-foliage" aria-hidden="true">
-    <svg class="leaf tl" viewBox="0 0 200 230" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="lf-a" x1="0" y1="0" x2="0.8" y2="1"><stop offset="0%" stop-color="#62B173"/><stop offset="55%" stop-color="#2E6B3F"/><stop offset="100%" stop-color="#143F1E"/></linearGradient></defs><path d="M100 8 C120 40 150 55 165 70 C150 72 148 74 168 96 C150 96 150 100 172 122 C152 120 154 126 170 150 C150 146 152 152 160 176 C138 168 138 174 140 196 C122 186 118 196 110 214 C104 200 100 200 100 222 C100 200 96 200 90 214 C82 196 78 186 60 196 C62 174 62 168 40 176 C48 152 50 146 30 150 C46 126 48 120 28 122 C50 100 50 96 32 96 C52 74 50 72 35 70 C50 55 80 40 100 8 Z" fill="url(#lf-a)"/><path d="M100 18 L100 218" stroke="rgba(15,50,22,0.5)" stroke-width="2.5" fill="none"/><path d="M100 60 L150 80 M100 100 L155 120 M100 140 L150 165 M100 175 L138 195 M100 60 L50 80 M100 100 L45 120 M100 140 L50 165 M100 175 L62 195" stroke="rgba(15,50,22,0.4)" stroke-width="1.5" fill="none"/></svg>
-    <svg class="leaf tr" viewBox="0 0 200 230" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="lf-b" x1="0" y1="0" x2="0.8" y2="1"><stop offset="0%" stop-color="#6ABF77"/><stop offset="55%" stop-color="#2E6B3F"/><stop offset="100%" stop-color="#10381A"/></linearGradient></defs><path d="M100 8 C120 40 150 55 165 70 C150 72 148 74 168 96 C150 96 150 100 172 122 C152 120 154 126 170 150 C150 146 152 152 160 176 C138 168 138 174 140 196 C122 186 118 196 110 214 C104 200 100 200 100 222 C100 200 96 200 90 214 C82 196 78 186 60 196 C62 174 62 168 40 176 C48 152 50 146 30 150 C46 126 48 120 28 122 C50 100 50 96 32 96 C52 74 50 72 35 70 C50 55 80 40 100 8 Z" fill="url(#lf-b)"/><path d="M100 18 L100 218" stroke="rgba(15,50,22,0.5)" stroke-width="2.5" fill="none"/><path d="M100 60 L150 80 M100 100 L155 120 M100 140 L150 165 M100 175 L138 195 M100 60 L50 80 M100 100 L45 120 M100 140 L50 165 M100 175 L62 195" stroke="rgba(15,50,22,0.4)" stroke-width="1.5" fill="none"/></svg>
-    <svg class="leaf bl" viewBox="0 0 200 230" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="lf-c" x1="0" y1="0" x2="0.8" y2="1"><stop offset="0%" stop-color="#5BA86A"/><stop offset="55%" stop-color="#27602F"/><stop offset="100%" stop-color="#0E3417"/></linearGradient></defs><path d="M100 8 C120 40 150 55 165 70 C150 72 148 74 168 96 C150 96 150 100 172 122 C152 120 154 126 170 150 C150 146 152 152 160 176 C138 168 138 174 140 196 C122 186 118 196 110 214 C104 200 100 200 100 222 C100 200 96 200 90 214 C82 196 78 186 60 196 C62 174 62 168 40 176 C48 152 50 146 30 150 C46 126 48 120 28 122 C50 100 50 96 32 96 C52 74 50 72 35 70 C50 55 80 40 100 8 Z" fill="url(#lf-c)"/><path d="M100 18 L100 218" stroke="rgba(15,50,22,0.5)" stroke-width="2.5" fill="none"/><path d="M100 60 L150 80 M100 100 L155 120 M100 140 L150 165 M100 60 L50 80 M100 100 L45 120 M100 140 L50 165" stroke="rgba(15,50,22,0.4)" stroke-width="1.5" fill="none"/></svg>
-  </div>
   <div class="cherries" id="cherries"></div>
 
   <div class="hero-eye">
