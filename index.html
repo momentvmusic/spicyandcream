@@ -213,6 +213,28 @@ section.scene{position:relative;z-index:5;padding:140px 24px;max-width:1320px;ma
 .curator-info .pill{padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.04);font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(232,226,213,0.8);display:inline-flex;align-items:center;gap:6px;transition:background 0.3s, border-color 0.3s, color 0.3s;}
 .curator-info .pill:hover{background:rgba(255,45,45,0.15);border-color:rgba(255,45,45,0.3);color:var(--juicy);}
 @media (max-width:900px){.curators-grid{grid-template-columns:1fr;}}
+/* LOCATION */
+.location-section{position:relative;min-height:82vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:130px 24px;overflow:hidden;z-index:5;}
+.location-bg{position:absolute;inset:0;z-index:0;background-image:url("assets/img/LOCACION.png");background-size:cover;background-position:center;transform:scale(1.06);}
+.location-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(5,5,5,0.62) 0%, rgba(5,5,5,0.28) 42%, rgba(5,5,5,0.9) 100%);}
+.location-inner{position:relative;z-index:2;max-width:940px;}
+.location-eye{display:inline-flex;align-items:center;gap:14px;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;}
+.location-eye .line{width:32px;height:1px;background:var(--gold);display:inline-block;}
+.location-title{font-family:var(--display);font-size:clamp(52px,9vw,140px);line-height:0.84;text-transform:uppercase;color:var(--cream);text-shadow:0 6px 50px rgba(0,0,0,0.7);}
+.location-sub{font-family:var(--serif);font-style:italic;font-size:clamp(20px,3vw,34px);color:var(--sand);margin-top:18px;text-shadow:0 2px 24px rgba(0,0,0,0.8);}
+.location-data{display:flex;flex-wrap:wrap;justify-content:center;gap:0;margin-top:50px;}
+.location-data .ld-item{padding:18px 44px;display:flex;flex-direction:column;gap:8px;position:relative;}
+.location-data .ld-item:not(:last-child)::after{content:"";position:absolute;right:0;top:50%;transform:translateY(-50%);height:50px;width:1px;background:rgba(255,240,212,0.22);}
+.location-data .ld-num{font-family:var(--display);font-size:clamp(28px,3.6vw,44px);text-transform:uppercase;background:linear-gradient(180deg,#fff 0%,#f4c97e 70%,#e9a23b 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.location-data .ld-lab{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:0.24em;text-transform:uppercase;color:rgba(255,240,212,0.72);}
+@media (max-width:700px){.location-data .ld-item{padding:14px 22px;flex:1 1 100%;}.location-data .ld-item:not(:last-child)::after{display:none;}.location-data .ld-item:not(:last-child){border-bottom:1px solid rgba(255,240,212,0.12);}}
+/* ATOLON CAROUSEL */
+.atolon-carousel{position:relative;z-index:5;overflow:hidden;padding:8px 0;background:var(--black);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
+.atolon-track{display:flex;width:max-content;gap:18px;animation:atolon-scroll 40s linear infinite;}
+.atolon-carousel:hover .atolon-track{animation-play-state:paused;}
+.atolon-track img{height:300px;width:auto;border-radius:14px;object-fit:cover;filter:saturate(1.05) brightness(0.95);box-shadow:0 12px 30px rgba(0,0,0,0.45);}
+@keyframes atolon-scroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+@media (max-width:700px){.atolon-track img{height:200px;}.atolon-track{gap:12px;}}
 
 /* PARTNERS */
 .partners-section{position:relative;z-index:5;padding:120px 24px;max-width:1320px;margin:0 auto;text-align:center;}
@@ -311,9 +333,9 @@ footer{position:relative;z-index:5;padding:80px 24px 32px;max-width:1320px;margi
 <!-- ANNOUNCEMENT -->
 <div class="announce">
   <span class="live-dot"></span>
-  <span>Cartagena · Domingo 07 Junio 2026</span>
+  <span>Aria Vega · Cartagena · Domingo 07 Junio 2026</span>
   <span style="opacity:0.7;">·</span>
-  <a href="#tour">Tickets a la venta <span style="margin-left:4px;">→</span></a>
+  <a href="#tickets">Tickets a la venta <span style="margin-left:4px;">→</span></a>
 </div>
 
 <!-- NAV -->
@@ -555,6 +577,35 @@ footer{position:relative;z-index:5;padding:80px 24px 32px;max-width:1320px;margi
 
   </div>
 </section>
+
+<!-- LOCATION -->
+<section class="location-section" id="location">
+  <div class="location-bg"></div>
+  <div class="location-inner reveal">
+    <span class="location-eye"><span class="line"></span>La locación<span class="line"></span></span>
+    <h2 class="location-title">Atolón<br>Beach Club</h2>
+    <p class="location-sub">Una isla privada frente al Caribe, en Tierra Bomba.</p>
+    <div class="location-data">
+      <div class="ld-item"><span class="ld-num">15 min</span><span class="ld-lab">En lancha desde Cartagena</span></div>
+      <div class="ld-item"><span class="ld-num">Incluido</span><span class="ld-lab">Transporte en tu boleta</span></div>
+      <div class="ld-item"><span class="ld-num">Tierra Bomba</span><span class="ld-lab">Isla privada · Cartagena</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ATOLON CAROUSEL -->
+<div class="atolon-carousel" aria-label="Galería Atolón Beach Club">
+  <div class="atolon-track">
+    <img src="assets/img/atolon-1.png" alt="Atolón Beach Club" loading="lazy">
+    <img src="assets/img/atolon-2.jpg" alt="Atolón Beach Club" loading="lazy">
+    <img src="assets/img/atolon-3.jpg" alt="Atolón Beach Club" loading="lazy">
+    <img src="assets/img/atolon-4.jpg" alt="Atolón Beach Club" loading="lazy">
+    <img src="assets/img/atolon-1.png" alt="" aria-hidden="true" loading="lazy">
+    <img src="assets/img/atolon-2.jpg" alt="" aria-hidden="true" loading="lazy">
+    <img src="assets/img/atolon-3.jpg" alt="" aria-hidden="true" loading="lazy">
+    <img src="assets/img/atolon-4.jpg" alt="" aria-hidden="true" loading="lazy">
+  </div>
+</div>
 
 <!-- PARTNERS -->
 <section class="partners-section" id="partners">
